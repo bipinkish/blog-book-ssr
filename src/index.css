@@ -1,13 +1,238 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: white;
+  color: #000;
 }
+
+body {
+  min-height: 100vh;
+  font-size: 1.5rem;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+  margin-bottom: 1em;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(17, 107, 115);
+  color: skyblue; /* Changed text color to sky blue */
+  font-family: 'Comic Sans MS', 'Cursive', sans-serif; /* Set to a creative font */
+  font-weight: bold; /* Set font to bold */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added shadow to text */
+  position: sticky;
+  top: 0;
+}
+
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+nav a,
+nav a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 50px;
+  margin: auto;
+}
+
+.postSection {
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 100%;
+  max-width: 98%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+.editSection {
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 100%;
+  max-width: 50%;
+  border: 1px solid #6b6b6b;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+h2.Form-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+input[type="text"],
+select,
+textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(66, 6, 91);
+  color: whitesmoke;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:not(:disabled):hover {
+  background-color: rgb(225, 2, 184);
+}
+
+
+.posts-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
+  gap: 1em; /* space between grid items */
+  margin: 0.5em;
+  padding: 1em;
+}
+
+.posts-container .post-excerpt {
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 1em;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom right, #ffffff, #e6e6e6);
+  min-height: 500px;
+  width: 100px;
+}
+
+
+
+article {
+  font-size: small;
+  margin: 0.5em;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 1em;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Adds a 3D shadow effect */
+  font-family: 'Arial', sans-serif; /* Sets a nice font */
+  background: linear-gradient(to bottom right, #ffffff, #e6e6e6); /* Adds a subtle gradient for more depth */
+}
+
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  font-size: 1.2rem;
+  margin: 0.5em 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+textarea {
+  height: 200px;
+}
+
+.postCredit {
+  font-size: 1rem;
+}
+
+.postCredit a,
+.postCredit a:visited {
+  margin-right: 0.5rem;
+  color: black;
+}
+
+.postCredit a:hover,
+.postCredit a:focus {
+  color: hsla(0, 0%, 0%, 0.75);
+}
+
+.excerpt {
+  font-style: italic;
+}
+
+.reactionButton {
+  margin: 0 0.25em 0 0;
+  background: transparent;
+  border: none;
+  color: #000;
+  font-size: 1rem;
+}
+
+.deleteButton {
+  background-color: rgba(197, 56, 56, 0.918);
+  color: white;
+  border-radius: 10px;
+}
+
